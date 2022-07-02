@@ -1,3 +1,6 @@
+var arrPlay2=new Array();
+var arrPlay1=new Array();
+
 var winner = () => {
   var randomNumber1 = Math.floor(Math.random() * 6) + 1; // random no. starts with 0, hence +1
 
@@ -12,18 +15,18 @@ var winner = () => {
   var randomImageSource2 = "images/dice" + randomNumber2 + ".png";
 
   document.querySelectorAll("img")[1].setAttribute("src", randomImageSource2);
-
-  var player1 = document.querySelectorAll("fname")[0].value;
-  var player2 = document.querySelectorAll("fname")[1].value;
-
+    
+  var player1 = document.getElementById("fname").value;
+  var player2 = document.getElementById("lname").value;
+  
   //Who wins
-  if (randomNumber1 > randomNumber2) {
-    document.querySelector("h1").innerHTML = player1+" Wins!";
-  } else if (randomNumber2 > randomNumber1) {
-    document.querySelector("h1").innerHTML = player2+" Wins!";
-  } else {
-    document.querySelector("h1").innerHTML = "Draw!";
-  }
+    if (randomNumber1 > randomNumber2) {
+      document.querySelector("h1").innerHTML = player1 +" wins!";
+    } else if (randomNumber2 > randomNumber1) {
+      document.querySelector("h1").innerHTML =player2 +" wins!";
+    } else {
+      document.querySelector("h1").innerHTML = "Draw!";
+    }
 };
 
 document.getElementById("play").addEventListener("click", winner);

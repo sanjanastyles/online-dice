@@ -76,8 +76,6 @@ footer {
   min-width: 140px;
   text-align: center;
   transition: all .3s;
-  -webkit-user-select: none;
-  touch-action: manipulation;
 }
 
 #play:hover {
@@ -90,4 +88,17 @@ footer {
   #play {
     min-width: 170px;
   }
+}
+
+#fname, #lname{
+  position: relative;
+  width: 80%;
+  padding: 10px 0;
+  font-size: 18px;
+  color: rgb(54, 54, 54);
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  outline: none;
+  background: transparent;
 }
