@@ -54,7 +54,7 @@ footer {
   justify-content: center;
 }
 
-.toggle{
+#theme{
   position: relative;
   padding-top: 20px;
   width: 60px;
@@ -114,7 +114,7 @@ footer {
     min-width: 170px;
   }
 
-  .toggle{
+ #theme{
     width: 80px;
   }
 }
