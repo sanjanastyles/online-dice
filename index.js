@@ -1,18 +1,18 @@
-var winner = () => {
-  var randomNumber1 = Math.floor(Math.random() * 6) + 1; // random no. starts with 0, hence +1
+let winner = () => {
+  let randomNumber1 = Math.floor(Math.random() * 6) + 1; // random no. starts with 0, hence +1
 
-  var randomImageSource1 = "images/dice" + randomNumber1 + ".png";
+  let randomImageSource1 = "images/dice" + randomNumber1 + ".png";
 
   document.querySelectorAll("img")[1].setAttribute("src", randomImageSource1);
 
-  var randomNumber2 = Math.floor(Math.random() * 6) + 1;
+  let randomNumber2 = Math.floor(Math.random() * 6) + 1;
 
-  var randomImageSource2 = "images/dice" + randomNumber2 + ".png";
+  let randomImageSource2 = "images/dice" + randomNumber2 + ".png";
 
   document.querySelectorAll("img")[2].setAttribute("src", randomImageSource2);
 
-  var player1 = document.getElementById("fname").value;
-  var player2 = document.getElementById("lname").value;
+  let player1 = document.getElementById("fname").value;
+  let player2 = document.getElementById("lname").value;
 
   //Who wins
   if (randomNumber1 > randomNumber2) {
@@ -24,29 +24,45 @@ var winner = () => {
   }
 };
 
-var theme = () => {
-  var current = document.querySelectorAll("img")[0];
+// let theme = () => {
+//   let current = document.querySelectorAll("img")[0];
 
-  var dark =
-    "https://cdn.discordapp.com/attachments/773668004004757514/992797197160698017/unknown.png";
+//   let dark =
+//     "https://cdn.discordapp.com/attachments/773668004004757514/992797197160698017/unknown.png";
 
-  var light =
-    "https://upload.wikimedia.org/wikipedia/en/thumb/f/fb/Yellow_icon.svg/1024px-Yellow_icon.svg.png";
+//   let light =
+//     "https://upload.wikimedia.org/wikipedia/en/thumb/f/fb/Yellow_icon.svg/1024px-Yellow_icon.svg.png";
 
-  if (current.src === light) {
-    current.setAttribute("src", dark);
-    document.querySelector("body").style.backgroundColor = "#232931";
-    document.getElementById("play").style.backgroundColor = "#232931";
-    document.getElementById("theme").style.backgroundColor = "#232931";
-    document.getElementById("fname").style.color = "#fff";
-    document.getElementById("lname").style.color = "#fff";
-    document.getElementById("fname").style.borderBottomColor = "#fff";
-    document.getElementById("lname").style.borderBottomColor = "#fff";
-  } else {
-    current.setAttribute("src", light);
+//   if (current.src === light) {
+//     current.setAttribute("src", dark);
+
+//   } else {
+//     current.setAttribute("src", light);
+//   }
+// };
+
+function load() {
+  const button = document.querySelector("#theme");
+
+  // MediaQueryList object
+  const useDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+  // Toggles the "dark-mode" class based on if the media query matches
+  function toggleDarkMode(state) {
+    document.documentElement.classList.toggle("dark-mode", state);
   }
-};
 
+  // Initial setting
+  toggleDarkMode(useDark.matches);
+
+  // Listen for changes in the OS settings
+  useDark.addListener((evt) => toggleDarkMode(evt.matches));
+
+  // Toggles the "dark-mode" class on click
+  button.addEventListener("click", () => {
+    document.documentElement.classList.toggle("dark-mode");
+  });
+}
+
+window.addEventListener("DOMContentLoaded", load);
 document.getElementById("play").addEventListener("click", winner);
-
-document.getElementById("theme").addEventListener("click", theme);
