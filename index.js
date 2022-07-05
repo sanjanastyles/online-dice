@@ -7,7 +7,6 @@ let winner = () => {
   let randomNumber1 = Math.floor(Math.random() * 6 + 1);
 
   var ResultClass1 = 'result-' + randomNumber1;
-  console.log(ResultClass1);
   if ( currentClass1 ) {
     cube1.classList.remove( currentClass1 );
   }
@@ -17,7 +16,6 @@ let winner = () => {
  let randomNumber2 = Math.floor(Math.random() * 6 + 1);
 
   var ResultClass2 = 'result-' + randomNumber2;
-  console.log(ResultClass2);
   if ( currentClass2 ) {
     cube2.classList.remove( currentClass2 );
   }

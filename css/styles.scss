@@ -32,10 +32,6 @@ h1 {
   color: var(--color);
 }
 
-// img {
-//   width: 80%;
-// }
-
 a {
   color: #96989d;
   text-decoration: none;
@@ -88,12 +84,12 @@ body {
 }
 
 .dice {
+  padding: 4% ;
   display: inline-block;
   text-align: center;
 }
 
 #play {
-  margin-top: 5%;
   align-items: center;
   background-color: transparent;
   border: 3px solid var(--color);
@@ -131,10 +127,6 @@ body {
   background: transparent;
 }
 
-// img:not([src*='.svg']) {
-//   filter: var(--image-filter);
-// }
-
 // Dice
 .cube {
   width: 200px;
@@ -145,22 +137,22 @@ body {
   transition: transform 1s;
 }
 
-.cube.result-1 {
+.result-1 {
   transform: translateZ(-100px) rotateY(0deg);
 }
-.cube.result-2 {
+.result-2 {
   transform: translateZ(-100px) rotateY(-180deg);
 }
-.cube.result-3 {
+.result-3 {
   transform: translateZ(-100px) rotateY(-90deg);
 }
-.cube.result-4 {
+.result-4 {
   transform: translateZ(-100px) rotateY(90deg);
 }
-.cube.result-5 {
+.result-5 {
   transform: translateZ(-100px) rotateX(-90deg);
 }
-.cube.result-6 {
+.result-6 {
   transform: translateZ(-100px) rotateX(90deg);
 }
 
@@ -205,9 +197,6 @@ body {
   #play {
     min-width: 170px;
   }
-  // .img{
-  //   width: 90%;
-  // }
   h1 {
     font-size: 8rem;
   }
