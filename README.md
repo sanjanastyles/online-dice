@@ -15,7 +15,7 @@ Here's an explanation to the source code. I've also provided images in images fo
 ## HTML
 ### Using Image folder
 
-<p> In this case we will display dice cubes as images, For which we will have to declare them as follows in the body tag of div `dice` </p>
+In this case we will display dice cubes as images, For which we will have to declare them as follows in the body tag of div `dice` 
 
 ```html
 <img class="img" src="images/dice6.png" />
@@ -75,9 +75,9 @@ combine them all to get:
 useDark.addListener((evt) => toggleDarkMode(evt.matches));
 ```
 
-<p>Determines the user's color preference even before they switch their website's theme using the `theme` button.</p>
+Determines the user's color preference even before they switch their website's theme using the `theme` button.
 
-<p> When `useDark.matches` is true, i.e the user's OS is set t o dark mode it will call on to the function  `toggleDarkMode` to set the SCSS to `dark-mode`. </p>
+When `useDark.matches` is true, i.e the user's OS is set t o dark mode it will call on to the function  `toggleDarkMode` to set the SCSS to `dark-mode`. 
 
 ```js
 toggleDarkMode(useDark.matches);
@@ -121,7 +121,7 @@ img:not([src*='.svg']) {
 
 ### Original Code
 
-<p>As we've seen in the JavaScript part, we are going to display the resulted dice face using a class namely `result- + random number`. To give a `#3D` effect to or dices. </p>
+As we've seen in the JavaScript part, we are going to display the resulted dice face using a class namely `result- + random number`. To give a `3D` effect to or dices. 
 
 ```scss
 transform-style: preserve-3d;
