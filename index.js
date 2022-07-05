@@ -1,15 +1,28 @@
+var cube1 = document.querySelector('.cube1');
+var cube2 = document.querySelector('.cube2');
+var currentClass1 = '';
+var currentClass2 = '';
+
 let winner = () => {
-  let randomNumber1 = Math.floor(Math.random() * 6) + 1; // random no. starts with 0, hence +1
+  let randomNumber1 = Math.floor(Math.random() * 6 + 1);
 
-  let randomImageSource1 = "images/dice" + randomNumber1 + ".png";
+  var ResultClass1 = 'result-' + randomNumber1;
+  console.log(ResultClass1);
+  if ( currentClass1 ) {
+    cube1.classList.remove( currentClass1 );
+  }
+  cube1.classList.add( ResultClass1 );
+  currentClass1 = ResultClass1;
 
-  document.querySelectorAll("img")[0].setAttribute("src", randomImageSource1);
+ let randomNumber2 = Math.floor(Math.random() * 6 + 1);
 
-  let randomNumber2 = Math.floor(Math.random() * 6) + 1;
-
-  let randomImageSource2 = "images/dice" + randomNumber2 + ".png";
-
-  document.querySelectorAll("img")[1].setAttribute("src", randomImageSource2);
+  var ResultClass2 = 'result-' + randomNumber2;
+  console.log(ResultClass2);
+  if ( currentClass2 ) {
+    cube2.classList.remove( currentClass2 );
+  }
+  cube2.classList.add( ResultClass2 );
+  currentClass2 = ResultClass2;
 
   let player1 = document.getElementById("fname").value;
   let player2 = document.getElementById("lname").value;
@@ -24,7 +37,7 @@ let winner = () => {
   }
 };
 
-function load() {
+function theme() {
   const button = document.querySelector("#theme");
 
   // MediaQueryList object
@@ -48,5 +61,5 @@ function load() {
   });
 }
 
-window.addEventListener("DOMContentLoaded", load);
+window.addEventListener("DOMContentLoaded", theme);
 document.getElementById("play").addEventListener("click", winner);
