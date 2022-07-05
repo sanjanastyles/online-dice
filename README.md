@@ -125,7 +125,7 @@ img:not([src*='.svg']) {
 
 ```scss
 transform-style: preserve-3d;
-  transform: translateZ(-100px);
+transform: translateZ(-100px);
   ```
 
 </div>
