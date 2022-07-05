@@ -4,7 +4,7 @@
   --background-color: #ffffff;
   --shadow-bg: #97999b;
   --button-bg: #e0e2e4;
-  --icon: "";
+  --icon: "";
 }
 
 .dark-mode {
@@ -13,7 +13,7 @@
   --shadow-bg: #000000;
   --button-bg: #4a4e55;
   --image-filter: grayscale(15%);
-  --icon: "";
+  --icon: "";
 }
 
 body {

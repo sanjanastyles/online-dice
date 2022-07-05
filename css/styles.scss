@@ -3,7 +3,7 @@
   --background-color: #ffffff;
   --shadow-bg: #97999b;
   --button-bg: #e0e2e4;
-  --icon: '\f185';
+  --icon: '\f186';
 }
 
 .dark-mode{
@@ -12,8 +12,7 @@
   --shadow-bg: #000000;
   --button-bg: #4a4e55;
   --image-filter: grayscale(15%);
-  --icon: '\f186';
-
+  --icon: '\f185';
 }
 
 body {
@@ -22,9 +21,7 @@ body {
   // overflow: hidden;
   width: 100%;
   background-color: var(--background-color);
-  transition: color var(--duration) var(--timing), background-color var(
-    --duration
-  ) var(--timing);
+  transition: color var(--duration) var(--timing), background-color var(--duration) var(--timing);
 }
 
 h1 {
