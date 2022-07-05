@@ -110,6 +110,15 @@ var ResultClass = "result-" + randomNumber;
 <div>
 
 ## SCSS
+I've used [Live Sass Complier](https://marketplace.visualstudio.com/items?itemName=glenn2223.live-sass) make sure "watching" is turned on. 🤫 I forgot to turn it own many times and wonder why nothing would change.
+</br><img src="https://cdn.discordapp.com/attachments/947060629066354689/993882750291550308/unknown.png" style="width: 30%">
+```
+Id: glenn2223.live-sass
+Description: Compile Sass or Scss to CSS at realtime.
+Version: 5.4.0
+Publisher: Glenn Marks`
+```
+
 ### Images Folder
 <p>I hope you can figure styling for  dices using IMAGES FOLDER. But a PS: A survey states that most people like their images little less popped when using dark mode. A trick to do that is using the following in my opinion. Good Luck.</p>
 
