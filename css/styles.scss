@@ -1,24 +1,25 @@
 :root{
   --color: #4f5660;
-  --unImportant: #96989d;
   --background-color: #ffffff;
-  --shadow-bg: #bfc2c5;
-  --button-bg: #ebedef;
+  --shadow-bg: #97999b;
+  --button-bg: #e0e2e4;
+  --icon: '\f185';
 }
 
 .dark-mode{
   --color: #fff;
-  --unImportant: #96989d;
   --background-color: #32353b;
-  --shadow-bg: #23252b;
-  --button-bg: #43464d;
-  --image-filter: grayscale(10%);
+  --shadow-bg: #000000;
+  --button-bg: #4a4e55;
+  --image-filter: grayscale(15%);
+  --icon: '\f186';
+
 }
 
 body {
    --duration: 0.5s;
   --timing: ease;
-  overflow: hidden;
+  // overflow: hidden;
   width: 100%;
   background-color: var(--background-color);
   transition: color var(--duration) var(--timing), background-color var(
@@ -39,7 +40,7 @@ img {
 }
 
 a {
-  color: var(--unImportant);
+  color: #96989d;
   text-decoration: none;
   font-weight: 1.5px;
   font-size: 25px;
@@ -70,13 +71,23 @@ body {
 }
 
 #theme {
-  position: relative;
-  padding-top: 20px;
-  width: 60px;
+  position: absolute;
   cursor: pointer;
-  margin-left: 88%;
-  background-color: transparent;
-  border: none;
+  background-color: var(--button-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top:20px;
+  right:70px;
+  width: 40px;
+  height:40px;
+  border-radius: 50%;
+}
+#theme::before{
+  content: var(--icon); 
+  font-family: fontAwesome;
+  color: var(--color);
+  font-size: large;
 }
 
 .dice {
@@ -115,7 +126,7 @@ body {
   width: 80%;
   padding: 10px 0;
   font-size: 18px;
-  color: var(--unImportant);
+  color: #96989d;
   margin-bottom: 30px;
   border: none;
   border-bottom: 1.5px solid var(--color);
@@ -130,10 +141,6 @@ img:not([src*='.svg']) {
 @media (min-width: 768px) {
   #play {
     min-width: 170px;
-  }
-
-  #theme {
-    width: 80px;
   }
   .img{
     width: 90%;
