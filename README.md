@@ -9,6 +9,8 @@ A really fun way to create your own Arbiter 😂 Change Player's name and find o
 Here's an explanation to the source code. I've also provided images in images folder, if you wish to use images instead of making a dice of your own in CSS, you can use the following code explanation to help guide you.
 
 ### Check functionality [HERE](https://sanjanastyles.github.io/online-dice/)
+# OR
+[![Watch Video](https://cdn.discordapp.com/attachments/833716260696489984/996320473816244274/unknown.png)](https://res.cloudinary.com/upwork-fp/video/upload/c_scale,w_1000,q_auto/v1657611370/profile/portfolio/1546501955135127552/n58l6i1vyolozup8upxx.mp4)
 
 <div>
 
